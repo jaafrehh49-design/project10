@@ -1,0 +1,191 @@
+/* النص فوق */
+.welcome-text {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  text-align: center;
+
+  font-size: 42px;
+  font-weight: bold;
+  color: #FFD700;
+  font-family: 'Poppins', sans-serif;
+
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+/* تغطية الشاشة */
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* البوكس */
+.login-box {
+  width: 420px;
+  padding: 40px;
+  border-radius: 18px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.35);
+  text-align: center;
+
+  isolation: isolate;
+}
+
+/* العنوان */
+.login-box h2 {
+  color: #FFD700;
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* input group */
+.input-group {
+  position: relative;
+  margin: 15px 0;
+}
+
+/* الحقول */
+.input-group input {
+  width: 100%;
+  padding: 14px 50px;
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 15px;
+}
+
+/* placeholder */
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* أيقونة اليسار */
+.input-group i:first-child {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFD700;
+  font-size: 18px;
+}
+
+/* أيقونة العين */
+.input-group i:last-child {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFD700;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* hover للأيقونات */
+.input-group i:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* focus */
+.input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+/* الزر */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+
+  background: #FFD700;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #ffcc00;
+  transform: scale(1.03);
+}
+
+/* 🔥 links (Reset + SignUp) */
+.links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;   /* 👈 بالنص */
+  align-items: center;       /* 👈 نفس المستوى */
+  gap: 40px;                 /* 👈 قربهم */
+}
+
+/* النصين */
+.reset,
+.signup {
+  color: #FFD700;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  line-height: 1; /* 👈 يمنع اختلاف الارتفاع */
+}
+
+/* hover */
+.reset:hover,
+.signup:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .welcome-text {
+    font-size: 28px;
+    top: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 26px;
+  }
+}
+
+/* 🔥 autofill fix */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.08) inset !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill {
+  -webkit-background-clip: text;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.08) inset !important;
+  -webkit-text-fill-color: white !important;
+}
+.links a {
+  pointer-events: auto;
+  z-index: 10;
+  position: relative;
+}

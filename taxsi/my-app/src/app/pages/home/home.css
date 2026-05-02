@@ -1,0 +1,788 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url('/assets/4.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+.login-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px; 
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+.overlay {
+  pointer-events: none;
+}
+
+.overlay .content {
+  pointer-events: auto;
+}
+/* تأثير hover */
+.login-btn:hover {
+  background-color: #333;
+}
+/* الهيرو */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+
+}
+
+/* الصورة */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* توزيع المحتوى */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center; /* بالنص عمودي */
+  justify-content: flex-start; /* عاليسار */
+  padding-left: 80px;
+}
+
+/* المحتوى */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 400px;
+}
+
+/* العنوان */
+.content h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #FFD700;
+  font-size: clamp(45px, 6vw, 90px);
+  font-weight: bold;
+  line-height: 1.1;
+  transform: translateY(-80px);
+}
+
+/* الزر */
+.btn {
+  background: #FFD700;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  transition: 0.3s;
+  margin-left: 100px;
+  transform: translateY(-50px);
+  display: inline-block;
+}
+
+/* hover */
+.btn:hover {
+  background: #ffcc00;
+  transform: translateY(-50px) scale(1.05); /* 👈 حافظنا على نفس المكان */
+}
+
+/* 👇 هذا أهم سطر حل المشكلة */
+.btn:active {
+  transform: translateY(-50px) scale(0.98); /* 👈 ما ينزل */
+}
+/* السوشال */
+.social {
+  display: flex;
+  gap: 15px;
+  margin-left: 100px;
+  transform: translateY(-200px);
+  margin-left: 150px;
+  z-index: 10;
+}
+
+/* الدائرة */
+.icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFD700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* hover */
+.icon:hover {
+  background: #FFD700;
+  color: black;
+  transform: scale(1.1);
+}
+/* 📱 موبايل */
+@media (max-width: 768px) {
+  .overlay {
+    justify-content: flex-start; /* 👈 خليه عاليسار */
+    padding-left: 20px; /* مسافة بسيطة */
+    text-align: left;
+  }
+
+  .content {
+    align-items: flex-start;
+    margin-left: -70px; 
+    transform: translateY(-40px);
+    /* 👈 دز الكل لليسار */
+  }
+
+  .btn {
+    margin-left: 10px;
+    transform: translateY(-40px); /* 👈 قلل المسافة عشان يقرب لليسار */
+  }
+  @media (max-width: 768px) {
+    .social {
+      margin-left: 30px;
+      transform: translateY(-200px);
+      z-index: 10;
+    }
+  
+    .icon {
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+      margin-top: -40px; 
+    }
+  }
+}
+.social {
+  position: relative;
+  z-index: 10;
+}
+
+.overlay {
+  pointer-events: none;
+}
+
+.content {
+  pointer-events: auto;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+
+  .slider {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .slides img {
+    width: 100%;   /* 👈 الصورة تصغر حسب الشاشة */
+    height: 200px;
+  }
+
+  /* الأسهم */
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+  }
+
+  /* مكان الأسهم */
+  .arrow.left {
+    left: -40px;   /* أقرب للصورة */
+  }
+
+  .arrow.right {
+    right: -40px;
+  }
+}
+@media (max-width: 480px) {
+
+  .arrow.left {
+    left: -20px;
+  }
+
+  .arrow.right {
+    right: -20px;
+  }
+
+  .slides img {
+    height: 180px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* القسم */
+.section2 {
+  position: relative;
+  width: 100%;
+  
+  overflow: hidden;
+  height: auto; /* 👈 بدل 100vh */
+  padding: 80px 0; 
+}
+
+/* 👇 صورة الخلفية */
+.section-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 👇 المحتوى فوق الصورة */
+.section-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 60px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* مقدمة */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+  transform: translateY(-40px);
+  font-size: 30px;
+}
+.intro h2 {
+  color: #FFD700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  color: #fff;
+  font-size: 18px;
+  font-size: 20px;
+}
+
+/* تقسيم */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* الصورة اليسار */
+.left img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: translateX(100px);
+}
+
+/* النص */
+.right {
+  max-width: 500px;
+  text-align: right;   /* 👈 يخلي النص عاليمين */
+  direction: rtl;      /* 👈 مهم للعربي */
+}
+
+.right h3 {
+  color: #FFD700;
+  margin-bottom: 10px;
+  font-size: 40px;
+
+}
+.right p {
+  font-size: clamp(16px, 2vw, 22px);
+}
+/* 📱 موبايل */
+@media (max-width: 768px) {
+
+  /* القسم يصير أطول حسب المحتوى */
+  .section2 {
+    height: auto;
+  }
+
+  .section-content {
+    padding: 30px 20px;
+    justify-content: flex-start;
+  }
+
+  /* المقدمة */
+  .intro {
+    transform: translateY(0); /* 👈 نلغي الرفع */
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  /* التقسيم يصير عمودي */
+  .about-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  /* الصورة بالنص */
+  .left img {
+    width: 220px;
+    height: 220px;
+    transform: translateX(0); /* 👈 نلغي الحركة */
+  }
+
+  /* النص */
+  .right {
+    max-width: 100%;
+    text-align: center; 
+    transform: translateY(40px);/* 👈 أو خليه right إذا بدك */
+  }
+
+  .right h3 {
+    font-size: 26px;
+  }
+
+  .right p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  justify-content: center; 
+}
+
+.slider {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.slides {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  
+  scroll-behavior: smooth;
+}
+
+/* إخفاء السكرول */
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* الصور */
+.slides img {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* الأسهم */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* 👈 هذا اللي يوسّطهم */
+  background: #FFD700;
+  color: black;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* يمين ويسار */
+.arrow.left {
+  left: -60px;   /* 👈 يطلع لبرا */
+}
+
+.arrow.right {
+  right: -60px;  /* 👈 يطلع لبرا */
+}
+.arrow.left,
+.arrow.right {
+  top: 50%;
+  transform: translateY(-50%) !important; /* 👈 يمنع أي تعارض */
+}
+
+/* hover */
+.arrow:hover {
+  background: #ffcc00;
+}
+
+.left img {
+  transform: translateY(100px); /* 👈 نزليها */
+}
+.right {
+  transform: translateY(100px);
+}       
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+}
+.arrow {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* سكشن موحد */
+.section {
+  position: relative;
+  width: 100%;
+  
+  min-height: auto;
+  overflow: hidden;
+}
+
+/* صورة الخلفية */
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* طبقة فوق الصورة */
+.overlay {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* المحتوى */
+.content {
+  max-width: 650px;
+}
+
+/* العنوان */
+.content h2 {
+  color: #FFD700;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* الفقرة */
+.main-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* القائمة */
+.services-list {
+  list-style: none;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.services-list li {
+  margin-bottom: 10px;
+  font-size: 17px;
+  position: relative;
+  padding-right: 20px;
+}
+
+.services-list li::before {
+  content: "✔";
+  position: absolute;
+  right: 0;
+  color: #FFD700;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 26px;
+  }
+
+  .main-text {
+    font-size: 16px;
+  }
+
+  .services-list li {
+    font-size: 15px;
+  }
+}
+
+/* 🔥 حل تعارض overlay بدون تخريب */
+
+/* الهيرو */
+.hero .overlay {
+  position: absolute !important;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  z-index: 2;
+}
+
+/* سكشن 3 الجديد */
+.section .overlay {
+  position: relative !important;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* تأكيد ترتيب الطبقات */
+.section,
+.section2,
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* تأكيد الصور تحت */
+.bg-img,
+.section-img,
+.hero-img {
+  z-index: 1;
+}
+
+/* تأكيد النص فوق */
+.overlay,
+.section-content {
+  z-index: 2;
+}
+/* تقسيم يمين / يسار */
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* النص */
+.text {
+  max-width: 500px;
+  text-align: left;
+}
+
+/* الصورة */
+.right-img img {
+  width: 330px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: translateX(30px);
+}
+/* النص عربي + يمين */
+.text {
+  max-width: 500px;
+  text-align: right;   /* 👈 يمين */
+  direction: rtl;      /* 👈 عربي */
+  transform: translateY(-40px); /* 👈 يطلع لفوق */
+}
+
+/* العنوان */
+.text h2 {
+  color: #FFD700; /* أصفر */
+  font-size: clamp(30px, 4vw, 45px); /* 👈 أكبر */
+  margin-bottom: 15px;
+}
+
+/* الفقرة */
+.main-text {
+  color: #fff; /* أبيض */
+  font-size: clamp(18px, 2vw, 22px); /* 👈 أكبر */
+  line-height: 1.8;
+}
+
+/* القائمة */
+.services-list {
+  direction: rtl;
+  text-align: right;
+}
+
+.services-list li {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+
+  /* السكشن */
+  .section {
+    min-height: auto; /* 👈 ما يجبره يكون طول الشاشة */
+  }
+
+  /* توزيع المحتوى */
+  .content-row {
+    flex-direction: column; /* 👈 يصير فوق بعض */
+    gap: 25px;
+    align-items: center;
+  }
+
+  /* النص */
+  .text {
+    text-align: right;     /* 👈 عربي */
+    direction: rtl;
+   /* 👈 بدون رفع */
+    max-width: 100%;
+    padding: 0 10px;
+    transform: translateY(-30px); 
+  }
+
+  /* العنوان */
+  .text h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  /* الفقرة */
+  .main-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* القائمة */
+  .services-list li {
+    font-size: 15px;
+  }
+
+  /* الصورة */
+  .right-img img {
+    
+    height: 200px;
+    width: 250px; 
+ 
+    transform: translateY(-30px); 
+  }
+  .text {
+    text-align: center;   /* 👈 بالنص */
+    direction: rtl;       /* 👈 يضل عربي */
+    margin: 0 auto;       /* 👈 يوسّطه */
+  }
+
+  .services-list {
+    text-align: center;   /* 👈 النقاط بالنص */
+  }
+
+  .services-list li {
+    padding-right: 0;
+  }
+
+  .services-list li::before {
+    display: none; /* 👈 يشيل ✔ عشان ما يخرب التوسيط */
+  }
+  .services-list li {
+    font-weight: bold; /* 👈 يخلي الخط غامق */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

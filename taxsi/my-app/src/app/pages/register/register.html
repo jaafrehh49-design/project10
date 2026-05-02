@@ -1,0 +1,62 @@
+<div class="login-wrapper">
+
+    <h1 class="welcome-text">Welcome to Taxi Line</h1>
+  
+    <div class="login-box">
+      <h2>Register</h2>
+  
+      <!-- 👇 حقول وهمية قوية -->
+      <input type="text" style="display:none">
+      <input type="password" style="display:none">
+  
+      <form (ngSubmit)="register()" #form="ngForm" autocomplete="off">
+  
+        <!-- Email -->
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input 
+            type="email"
+            placeholder="Email"
+            [(ngModel)]="email"
+            name="email_{{randomId}}"
+            required
+            autocomplete="off"
+          />
+        </div>
+  
+        <!-- Password -->
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+  
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            placeholder="Password"
+            [(ngModel)]="password"
+            name="password_{{randomId}}"
+            required
+            autocomplete="new-password"
+          />
+  
+          <i
+            class="fa"
+            [class.fa-eye]="!showPassword"
+            [class.fa-eye-slash]="showPassword"
+            (click)="togglePassword()"
+          ></i>
+        </div>
+  
+        <button type="submit" [disabled]="form.invalid">
+          Sign Up
+        </button>
+  
+      </form>
+  
+      <div class="links">
+        <span class="signup" routerLink="/login">
+          Already have an account? Login
+        </span>
+      </div>
+  
+    </div>
+  
+  </div>

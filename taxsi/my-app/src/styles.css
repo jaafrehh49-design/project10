@@ -1,0 +1,21 @@
+/* Reset عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* يمنع أي فراغات */
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('/assets/4.jpeg') center/cover no-repeat;
+    z-index: -1;
+    
+  }
+  

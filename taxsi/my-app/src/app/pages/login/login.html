@@ -1,0 +1,63 @@
+<div class="login-wrapper">
+
+  <h1 class="welcome-text">Welcome to Taxi Line</h1>
+
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <!-- 👇 حقول وهمية لخداع Chrome -->
+    <input type="text" style="display:none">
+    <input type="password" style="display:none">
+
+    <form (ngSubmit)="login()" autocomplete="off">
+
+      <!-- Email -->
+      <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <input 
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="email"
+          name="email_{{randomId}}"
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <i class="fa fa-lock"></i>
+
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password_{{randomId}}"
+          autocomplete="new-password"
+        />
+
+        <!-- 👁 -->
+        <i
+          class="fa"
+          [class.fa-eye]="!showPassword"
+          [class.fa-eye-slash]="showPassword"
+          (click)="togglePassword()"
+        ></i>
+      </div>
+
+      <button type="submit">Sign In</button>
+
+      
+        <div class="links">
+          <a class="reset" routerLink="/forgot-password">
+            Reset Password
+          </a>
+        
+          <a class="signup" routerLink="/register">
+            Sign Up
+          </a>
+        </div>
+     
+    </form>
+  </div>
+
+</div>
