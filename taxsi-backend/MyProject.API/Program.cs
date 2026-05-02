@@ -59,8 +59,8 @@ var app = builder.Build();
 
 // Middleware
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // 👇 تحويل الصفحة الرئيسية للـ Swagger
 app.MapGet("/", () => Results.Redirect("/swagger"));
@@ -74,3 +74,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
