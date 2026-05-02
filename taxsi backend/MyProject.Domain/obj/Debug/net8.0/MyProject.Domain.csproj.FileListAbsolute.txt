@@ -20,3 +20,15 @@ E:\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.dll
 E:\taxsi backend\MyProject.Domain\obj\Debug\net8.0\refint\MyProject.Domain.dll
 E:\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.pdb
 E:\taxsi backend\MyProject.Domain\obj\Debug\net8.0\ref\MyProject.Domain.dll
+E:\project10\taxsi backend\MyProject.Domain\bin\Debug\net8.0\MyProject.Domain.deps.json
+E:\project10\taxsi backend\MyProject.Domain\bin\Debug\net8.0\MyProject.Domain.dll
+E:\project10\taxsi backend\MyProject.Domain\bin\Debug\net8.0\MyProject.Domain.pdb
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.AssemblyInfoInputs.cache
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.AssemblyInfo.cs
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.csproj.CoreCompileInputs.cache
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.sourcelink.json
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.dll
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\refint\MyProject.Domain.dll
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\MyProject.Domain.pdb
+E:\project10\taxsi backend\MyProject.Domain\obj\Debug\net8.0\ref\MyProject.Domain.dll

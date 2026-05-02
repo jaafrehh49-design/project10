@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj": {}
+    "E:\\project10\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj": {}
   },
   "projects": {
-    "E:\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj": {
+    "E:\\project10\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj",
+        "projectUniqueName": "E:\\project10\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj",
         "projectName": "MyProject.Application",
-        "projectPath": "E:\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj",
+        "projectPath": "E:\\project10\\taxsi backend\\MyProject.Application\\MyProject.Application.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\taxsi backend\\MyProject.Application\\obj\\",
+        "outputPath": "E:\\project10\\taxsi backend\\MyProject.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj": {
-                "projectPath": "E:\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj"
+              "E:\\project10\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj": {
+                "projectPath": "E:\\project10\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "E:\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj": {
+    "E:\\project10\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj",
+        "projectUniqueName": "E:\\project10\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj",
         "projectName": "MyProject.Domain",
-        "projectPath": "E:\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj",
+        "projectPath": "E:\\project10\\taxsi backend\\MyProject.Domain\\MyProject.Domain.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\taxsi backend\\MyProject.Domain\\obj\\",
+        "outputPath": "E:\\project10\\taxsi backend\\MyProject.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
