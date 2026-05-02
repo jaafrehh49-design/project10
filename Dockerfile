@@ -1,13 +1,17 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-COPY . ./
+COPY . .
 
-WORKDIR /app/taxsi-backend/MyProject.API
-RUN dotnet publish -c Release -o out
+WORKDIR "/src/taxsi-backend/MyProject.API"
+RUN dotnet publish "MyProject.API.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=build /app/taxsi-backend/MyProject.API/out .
+COPY --from=build /app/publish .
+
+EXPOSE 8080
+
+ENV ASPNETCORE_URLS=http://+:8080
 
 ENTRYPOINT ["dotnet", "MyProject.API.dll"]
