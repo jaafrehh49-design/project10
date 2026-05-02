@@ -18,8 +18,8 @@ builder.Services.AddCors(options =>
 // Services
 builder.Services.AddControllers();
 
-// builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -61,7 +61,6 @@ var app = builder.Build();
 
     app.UseSwagger();
     app.UseSwaggerUI();
-
 
 // 👇 تحويل الصفحة الرئيسية للـ Swagger
 app.MapGet("/", () => Results.Redirect("/swagger"));
