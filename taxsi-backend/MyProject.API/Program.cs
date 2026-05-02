@@ -58,11 +58,10 @@ builder.Services.AddScoped<EmailService>(); // 👈 مهم
 var app = builder.Build();
 
 // Middleware
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+
 
 // 👇 تحويل الصفحة الرئيسية للـ Swagger
 app.MapGet("/", () => Results.Redirect("/swagger"));
